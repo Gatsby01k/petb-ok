@@ -362,6 +362,7 @@ const FAQ = () => (
       <h2 className="text-3xl sm:text-4xl font-extrabold text-white text-center mb-10">
         Frequently Asked Questions
       </h2>
+
       <GlassCard>
         <h3 className="font-semibold text-white">How is equity managed?</h3>
         <p className="text-white/80 mt-2">
@@ -369,10 +370,9 @@ const FAQ = () => (
           immutable ownership records.
         </p>
       </GlassCard>
+
       <GlassCard className="mt-6">
-        <h3 className="font-semibold text-white">
-          What’s the role of Peter Todd?
-        </h3>
+        <h3 className="font-semibold text-white">What’s the role of Peter Todd?</h3>
         <p className="text-white/80 mt-2">
           Peter Todd provides strategic guidance, cryptographic research, and
           vision for governance.
@@ -383,6 +383,26 @@ const FAQ = () => (
 );
 
 // === Footer ===
-const Footer = () => (
-  <footer className="relative py-8 text-center text-white/60">
-    <p>© {new Date().getFullYear()}
+const Footer = () => {
+  return (
+    <footer className="relative py-8 text-center text-white/60">
+      <p>© {new Date().getFullYear()} Peter Todd Bitcoin · All rights reserved.</p>
+    </footer>
+  );
+};
+
+// === Main Page ===
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-[#11100c] text-white">
+      <Nav />
+      <Hero />
+      <Vision />
+      <Tiers />
+      <OnChain />
+      <Apply />
+      <FAQ />
+      <Footer />
+    </div>
+  );
+}
